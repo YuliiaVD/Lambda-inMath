@@ -27,11 +27,11 @@ public class Main {
             }
         };
         res = mathOperation.operate(a, b);
-        System.out.println("1) The result is " + res);
+        System.out.println("1) The result is: " + res);
 
         //через лямбда-вираз, реалізуємо функціональний інтерфейс StringManipulator
         data = "Lambda in Math";
-        stringManipulator = data -> "2) Result is " + data.toUpperCase();
+        stringManipulator = data -> "2) The result is: " + data.toUpperCase();
         res2 = stringManipulator.dataHandler(data);
         System.out.println(res2);
 
@@ -39,12 +39,12 @@ public class Main {
         //як аргумент функції Function<String, Integer>
         Function<String, Integer>  countUpperCharacter = StringListProcessor::countUppercase;
         res3 = countUpperCharacter.apply(data);
-        System.out.println("3) Result is " + res3);
+        System.out.println("3) The result is: " + res3);
 
         //Використовуємо інтерфейс Supplier<T>, для рандомного генерування числа
         Supplier<Integer> randomSupplier = () -> RandomNumberGenerator.generateRandomNumber(1,100);
         res4 = randomSupplier.get();
-        System.out.println("4) Result is; " + res4);
+        System.out.println("4) The result is: " + res4);
 
 
     }
