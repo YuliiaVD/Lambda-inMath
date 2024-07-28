@@ -38,7 +38,7 @@ public class Main {
         //Використання посалання на метод, щоб передати метод countUppercase
         //як аргумент функції Function<String, Integer>
         Function<String, Integer>  countUpperCharacter = StringListProcessor::countUppercase;
-        res3 = countUpperCharacter.apply(res2);
+        res3 = countUpperCharacter.apply(data);
         System.out.println("3) Result is " + res3);
 
         //Використовуємо інтерфейс Supplier<T>, для рандомного генерування числа
